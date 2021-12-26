@@ -1,0 +1,183 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600&display=swap');
+:root {
+    --background: #fff;
+    --background-dark: rgb(230, 230, 230);
+    --home-link: #5f6368;
+    --active-color: rgb(33, 121, 236);
+}
+
+/* Global */
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+a {
+    text-decoration: none;
+    color: var(--home-link);
+}
+body {
+    background-color: var(--background);
+    font-family: 'Poppins', sans-serif;
+}
+
+/* Header */
+header {
+    display: flex;
+    background-color: inherit;
+    justify-content: space-between;
+    height: 70px;
+    position: sticky;
+    top: 0;
+}
+.header {
+    display: flex;
+    padding: 8px;
+    justify-content: space-evenly;
+}
+.head {
+    display: flex;
+    align-items: center;
+    width: 300px;
+}
+.hamburger-menu {
+    display: flex;
+    align-items: center;
+    padding: 12px;
+    margin: 0 4px;
+}
+.home {
+    display: flex;
+    margin: 4px;
+    align-items: center;
+}
+.home img {
+    height: 40px;
+    width: 40px;
+    margin: 5px;
+    padding: 1px;
+}
+.home span {
+    font-size: 24px;
+    margin: 0 4px;
+}
+
+/* Search */
+.search {
+    display: flex;
+    align-items: center;
+    background-color: rgb(245, 245, 245);
+    border-radius: 10px;
+    padding: 0px 5px;
+}
+.search-box {
+    display: flex;
+    align-self: center;
+    background-color: inherit;
+}
+.search-button {
+    display: flex;
+    align-self: center;
+    background-color: inherit;
+    border: none;
+    margin: 0 5px;
+}
+.search-button img {
+    background-color: inherit;
+    padding: 10px;
+}
+.search-area {
+    font-family: 'Poppins', sans-serif;
+    padding: 0 10px;
+    border: none;
+    background-color: inherit;
+    font-size: 18px;
+    width: 600px;
+}
+.search-area:focus {
+    outline: none;
+}
+/* Profile */
+.profile-side {
+    display: flex;
+    align-items: center;
+}
+.apps {
+    display: flex;
+    align-items: center;
+    padding: 4px;
+    margin: 0 10px;
+}
+.apps img {
+    height: 40px;
+    width: 40px;
+    padding: 10px;
+}
+.profile {
+    display: flex;
+    align-items: center;
+    margin: 0 10px ;
+}
+.profile img {
+    height: 40px;
+    width: 40px;
+    margin: 8px;
+}
+
+/* Effects */
+.circle {
+    border-radius: 50%;
+}
+.hover-effect:hover {
+    background-color: var(--background-dark);
+    cursor: pointer;
+}
+
+@media screen and (max-width: 1286px) {
+    .search-area {
+        width: calc(100vw - 690px);
+    }
+}
+
+/* Aside */
+aside {
+    position: fixed;
+    height: 100%;
+    width: 300px;
+}
+.create {
+    display: flex;
+    justify-content: flex-start;
+    margin: 20px 8px;
+}
+.btn {
+    background-color:var(--background);
+    color: #222;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 25px;
+    font-size: 16px;
+    font-weight: 500;
+    padding: 2px 26px;
+    height: 50px;
+    border: 0;
+    box-shadow: 0 1px 2px 0 rgb(60 64 67 / 30%),
+                0 1px 3px 1px rgb(60 64 67 / 15%);
+}
+.btn:hover {
+    color: var(--active-color);
+    background-color: rgba(169, 204, 245, 0.1);
+    box-shadow: 4px 4px 4px 0px rgb(60 64 67 / 30%),
+                4px 4px 4px 2px rgb(60 64 67 / 15%);
+}
+.btn img {
+    height: 24px;
+    margin-right: 16px;
+}
+
+/* Main */
+main {
+    margin-left: 300px;
+    padding: 20px;
+}
