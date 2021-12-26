@@ -23,6 +23,9 @@ body {
     background-color: var(--background);
     font-family: 'Poppins', sans-serif;
 }
+button {
+    cursor: pointer;
+}
 
 /* Header */
 header {
@@ -133,10 +136,12 @@ header {
     display: flex;
     align-items: center;
     border-radius: 50%;
-
 }
 .hover-effect:hover {
     background-color: var(--background-dark);
+    cursor: pointer;
+}
+.pointer {
     cursor: pointer;
 }
 
@@ -226,11 +231,13 @@ main {
 .row {
     display: flex;
     align-items: center;
+    cursor: pointer;
 }
 .row:hover {
     background-color: var(--hover-background-color);
 }
 .thead {
+    display: flex;
     padding: 10px;
     font-weight: 600;
     border-bottom: 1px solid var(--line);
