@@ -3,7 +3,8 @@
     --background: #fff;
     --background-dark: rgb(230, 230, 230);
     --hover-background-color: rgb(245, 245, 245);
-    --home-link: #5f6368;
+    --color: #444;
+    --home-link: #333;
     --active-color: #1967d2;
     --line: #bbb;
 }
@@ -62,6 +63,7 @@ header {
 .home span {
     font-size: 24px;
     margin: 0 4px;
+    padding-right: 10px;
 }
 
 /* Search */
@@ -219,8 +221,8 @@ main {
 .table {
     padding: 10px;
     margin-right: 50px;
+    color: var(--color);
 }
-
 .row {
     display: flex;
     align-items: center;
@@ -230,6 +232,7 @@ main {
 }
 .thead {
     padding: 10px;
+    font-weight: 600;
     border-bottom: 1px solid var(--line);
 }
 .tbody {
@@ -260,4 +263,55 @@ main {
     .phone {
         display: none;
     }
+    .name {
+        width: 60%;
+    }
 }
+
+@media screen and (max-width: 1024px) {
+    aside {
+        display: none;
+    }
+    main {
+        margin: 0
+    }
+    .search-area {
+        width: 334px;
+    }
+    .apps {
+        display: none;
+    }
+    .table {
+        margin: 0;
+    }
+}
+@media screen and (max-width: 900px) {
+    .head {
+        width: auto;
+    }
+    .home img {
+        display: none;
+    }
+}
+@media screen and (max-width: 766px) {
+    .email {
+        display: none;
+    }
+    .name {
+        width: 90%;
+    }
+    .header {
+        width: calc(100% - 76px);
+        justify-content: space-between;
+    }
+    .search {
+        background-color: var(--background);
+    }
+    .search-area {
+        display: none;
+    }
+    main {
+        padding: 5px;
+    }
+}
+
