@@ -2,8 +2,10 @@
 :root {
     --background: #fff;
     --background-dark: rgb(230, 230, 230);
+    --hover-background-color: rgb(245, 245, 245);
     --home-link: #5f6368;
-    --active-color: rgb(33, 121, 236);
+    --active-color: #1967d2;
+    --line: #bbb;
 }
 
 /* Global */
@@ -66,7 +68,7 @@ header {
 .search {
     display: flex;
     align-items: center;
-    background-color: rgb(245, 245, 245);
+    background-color: var(--hover-background-color);
     border-radius: 10px;
     padding: 0px 5px;
 }
@@ -126,7 +128,10 @@ header {
 
 /* Effects */
 .circle {
+    display: flex;
+    align-items: center;
     border-radius: 50%;
+
 }
 .hover-effect:hover {
     background-color: var(--background-dark);
@@ -175,9 +180,84 @@ aside {
     height: 24px;
     margin-right: 16px;
 }
+.navbar {
+    padding: 10px 0 10px 0;
+    margin-right: 20px;
+    border-bottom: 1px solid var(--line);
+}
+.navbar div a {
+    display: flex;
+    padding: 10px 30px;
+    height: 100%;
+    width: 100%;
+}
+.navbar div a span {
+    display: flex;
+    flex-grow: 1;
+}
+.number {
+    justify-content: flex-end;
+}
+.links img {
+    margin-right: 20px;
+    filter: invert(40%) sepia(10%) saturate(258%) hue-rotate(173deg) brightness(91%) contrast(86%);
+}
+.active {
+    color: var(--active-color);
+    background-color: #e8f0fe;
+    border-radius: 0 25px 25px 0;
+}
+.active > img {
+    filter: invert(27%) sepia(81%) saturate(3945%) hue-rotate(209deg) brightness(91%) contrast(81%);
+}
 
 /* Main */
 main {
     margin-left: 300px;
     padding: 20px;
+}
+.table {
+    padding: 10px;
+    margin-right: 50px;
+}
+
+.row {
+    display: flex;
+    align-items: center;
+}
+.row:hover {
+    background-color: var(--hover-background-color);
+}
+.thead {
+    padding: 10px;
+    border-bottom: 1px solid var(--line);
+}
+.tbody {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+}
+.name {
+    display: flex;
+    align-items: center;
+    width: 40%;
+}
+.phone {
+    width: 20%;
+}
+.email {
+    width: 30%;
+}
+.buttons {
+    display: flex;
+    visibility: hidden;
+}
+.row:hover .buttons {
+   visibility: visible;
+}
+
+@media screen and (max-width: 1286px) {
+    .phone {
+        display: none;
+    }
 }
